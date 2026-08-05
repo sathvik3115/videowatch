@@ -6,7 +6,7 @@ your machine**: nothing is uploaded.
 
 It works because a model reads images and text, not video. `videowatch` turns a
 video into: scene-aware **timestamped frames**, **contact-sheet** overviews, an
-optional **OCR** pass for exact on-screen text, and a **whisper transcript** —
+optional **OCR** pass for exact on-screen text, and a **whisper transcript**,
 then hands those to Claude.
 
 Runs on **Windows, macOS and Linux**. Every dependency is bundled or

@@ -19,14 +19,14 @@ pip-managed, so a fresh machine needs nothing pre-installed.
 With [pipx](https://pipx.pypa.io) (recommended — isolated, global command):
 
 ```
-pipx install "git+https://github.com/<you>/videowatch.git#egg=videowatch[mcp]"
+pipx install "git+https://github.com/sathvik3115/videowatch.git#egg=videowatch[mcp]"
 videowatch-setup
 ```
 
 Or with pip:
 
 ```
-pip install "git+https://github.com/<you>/videowatch.git#egg=videowatch[mcp]"
+pip install "git+https://github.com/sathvik3115/videowatch.git#egg=videowatch[mcp]"
 videowatch-setup
 ```
 

@@ -1,6 +1,6 @@
 # videowatch
 
-Let Claude (or any model) **watch and analyse videos** — screen recordings,
+Let Claude (or any model) **watch and analyse videos**, screen recordings,
 tutorials, meetings, GIFs, animations, or a video URL. It runs **entirely on
 your machine**: nothing is uploaded.
 
@@ -16,7 +16,7 @@ pip-managed, so a fresh machine needs nothing pre-installed.
 
 ## Install (one command)
 
-With [pipx](https://pipx.pypa.io) (recommended — isolated, global command):
+With [pipx](https://pipx.pypa.io) (recommended, isolated, global command):
 
 ```
 pipx install "git+https://github.com/sathvik3115/videowatch.git#egg=videowatch[mcp]"
@@ -57,7 +57,7 @@ videowatch-setup
 The tool `analyse_video(path_or_url, ...)` appears automatically. Just ask
 Claude to analyse a video and point it at a path or URL.
 
-**Standalone CLI** (no Claude needed — produces the analysis folder)
+**Standalone CLI** (no Claude needed, produces the analysis folder)
 
 ```
 videowatch /path/to/video.mp4 --out ./out
@@ -95,7 +95,7 @@ videowatch /path/to/video.mp4 --out ./out
 ### Notes on audio with music
 Whisper is a speech model. Instrumental background music is mostly suppressed by
 the VAD filter; vocals get transcribed as if speech; loud music over narration
-degrades accuracy — use `--model small`/`medium` for those.
+degrades accuracy, use `--model small`/`medium` for those.
 
 ---
 

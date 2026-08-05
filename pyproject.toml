@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "videowatch"
+version = "0.1.0"
+description = "Let Claude watch and analyse videos: local, cross-platform frames + transcript."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "videowatch" }]
+keywords = ["video", "claude", "mcp", "whisper", "ffmpeg", "analysis"]
+
+# Core deps are pure-Python / pip-managed so a fresh machine needs nothing
+# pre-installed. static-ffmpeg provides ffmpeg+ffprobe binaries per-OS when
+# the system has none.
+dependencies = [
+    "faster-whisper>=1.0",
+    "yt-dlp>=2024.1",
+    "static-ffmpeg>=2.5",
+]
+
+[project.optional-dependencies]
+mcp = ["mcp>=1.2"]
+all = ["mcp>=1.2"]
+
+[project.scripts]
+videowatch = "videowatch.cli:main"
+videowatch-mcp = "videowatch.mcp_server:main"
+videowatch-setup = "videowatch.installer:main"
+
+[tool.setuptools]
+packages = ["videowatch"]
+
+[tool.setuptools.package-data]
+videowatch = ["assets/*.ttf", "command_template.md"]
